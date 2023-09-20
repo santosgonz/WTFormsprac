@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Add a New Pet</h1>
+    <form action="/add" id = "pet_add_form" method="POST">
+        {{ form.hidden_tag() }}
+        {% for field in form
+            if field.widget.input_type != 'hidden' %}
+        <p>
+            {{field.label}}
+            {{field}}
+        {% endfor %}
+        </p>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,5 @@
+Form data is all string when we call form.validate_on_submit()
+    It says if its valid data it takes empty form to render form template and fills form object with data from request
+
+GET Requests
+    requests.get(url, params)
